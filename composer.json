@@ -1,0 +1,63 @@
+{
+    "name": "eolica/laravel-image",
+    "description": "Nuxt Image-inspired image URL providers for Laravel",
+    "keywords": [
+        "eolica",
+        "laravel",
+        "image",
+        "cdn",
+        "bunny",
+        "glide",
+        "imgproxy"
+    ],
+    "homepage": "https://github.com/Eolica-Web/laravel-image",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "David Llobell",
+            "email": "dllobell@eolicadigital.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "illuminate/contracts": "^13.0",
+        "illuminate/support": "^13.0"
+    },
+    "require-dev": {
+        "league/glide": "^3.0",
+        "orchestra/testbench": "^11.0",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^13.0"
+    },
+    "suggest": {
+        "league/glide": "Required to use the Glide image provider (^3.0)"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eolica\\LaravelImage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eolica\\LaravelImage\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eolica\\LaravelImage\\ImageServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
